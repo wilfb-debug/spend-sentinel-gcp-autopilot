@@ -1,5 +1,9 @@
 # SpendSentinel – GCP FinOps Autopilot
 
+## Architecture
+
+![Architecture Diagram](docs/images/architecture-diagram.png)
+
 ## Overview
 
 SpendSentinel is a serverless FinOps automation platform built on Google Cloud that continuously discovers infrastructure resources, detects cost optimisation opportunities, and visualises potential savings through a dashboard.
@@ -23,10 +27,6 @@ SpendSentinel solves this by automatically scanning cloud infrastructure and hig
 
 ---
 
-## Architecture
-
-![Architecture Diagram](docs/images/architecture-diagram.png)
-
 ### Architecture Flow
 
 1. **Cloud Scheduler**
@@ -43,6 +43,68 @@ SpendSentinel solves this by automatically scanning cloud infrastructure and hig
 
 5. **Looker Studio**
    - Visualises cost optimisation insights through dashboards.
+
+---
+
+## Project Walkthrough
+
+Below are key stages showing the platform being built and producing FinOps insights.
+
+---
+
+### Billing Export Enabled
+
+Cloud billing export is enabled so cost data can be analysed in BigQuery.
+
+![Billing Export Enabled](docs/01-billing-export-enabled.png)
+
+---
+
+### BigQuery Dataset Created
+
+The SpendSentinel dataset stores infrastructure inventory and cost analysis data.
+
+![BigQuery Dataset](docs/02-bigquery-datasets-created.png)
+
+---
+
+### Findings Table Created
+
+This table stores detected cost optimisation opportunities.
+
+![Findings Table](docs/03-table-findings-created.png)
+
+---
+
+### Actions Log Table Created
+
+Tracks optimisation actions taken across infrastructure.
+
+![Actions Log Table](docs/04-table-actions-log-created.png)
+
+---
+
+### Daily Savings Table
+
+Stores aggregated potential savings per day.
+
+![Daily Savings Table](docs/05-table-daily-savings-created.png)
+
+---
+
+### BigQuery Tables Overview
+
+All FinOps data tables created successfully.
+
+![BigQuery Tables](docs/06-spendsentinel-bigquery-tables.png)
+
+---
+
+### Inventory Table Populated
+
+The Cloud Run job successfully discovers infrastructure resources and writes them to BigQuery.
+
+![Inventory Data](docs/07-inventory-table-created.png)
 
 ---
 
