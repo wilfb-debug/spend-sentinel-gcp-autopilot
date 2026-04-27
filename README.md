@@ -1,5 +1,12 @@
 # SpendSentinel – GCP FinOps Autopilot
 
+![CI](https://github.com/wilfb-debug/spend-sentinel-gcp-autopilot/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python)
+![GCP](https://img.shields.io/badge/GCP-Cloud%20Run-4285F4?logo=google-cloud)
+![tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![coverage](https://img.shields.io/badge/coverage-80%25+-brightgreen)
+
+
 ## Architecture
 
 ![Architecture Diagram](docs/images/architecture-diagram.png)
